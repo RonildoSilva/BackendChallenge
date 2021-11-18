@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "f2d34ef3-27eb-4fe8-9133-3289f2002927",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send message by email",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2MzcyODk0MzYsImlhdCI6MTYzNzI3MTQzNn0.pDiLKfvX4Fjb_9IZ39P9D_hKIuZA0_VS2-bkuWe247J6BInNjKVCOYzaB1ytcj0h_gcGT9qVWme2KLBTRS_GXQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"errei o nome\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/message/user1@mail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"message",
+						"user1@mail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb2dpbl8xIiwiZXhwIjoxNjM3MjkxODk1LCJpYXQiOjE2MzcyNzM4OTV9.dHoYWdNg_Xve6CtGxO12RIK9QsYWr5wtAKpkbtgxdUahYOKJL5DhnbLTSn3Z_nPYqbIYw6kZikksdcrCLC7UZA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"login_1\",\r\n    \"password\":\"pass1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User creation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJsb2dpbl8xIiwiZXhwIjoxNjM3MjkxODk1LCJpYXQiOjE2MzcyNzM4OTV9.dHoYWdNg_Xve6CtGxO12RIK9QsYWr5wtAKpkbtgxdUahYOKJL5DhnbLTSn3Z_nPYqbIYw6kZikksdcrCLC7UZA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"ronildo\",\r\n    \"login\" : \"ronildo\",\r\n    \"email\": \"ronildo.comp@gmail.com\",\r\n    \"password\" : \"password\",\r\n    \"admin\": true\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/admin/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYXZhaW51c2UiLCJleHAiOjE2MzcyODk0MzYsImlhdCI6MTYzNzI3MTQzNn0.pDiLKfvX4Fjb_9IZ39P9D_hKIuZA0_VS2-bkuWe247J6BInNjKVCOYzaB1ytcj0h_gcGT9qVWme2KLBTRS_GXQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/v1/admin/user/delete/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"user",
+						"delete",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
